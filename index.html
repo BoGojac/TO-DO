@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>TO-DO</title>
+</head>
+<body>
+    <div class="entier-app">
+        <div class="titel-icon">
+             <h1>TO-DO</h1>
+             <button class="sort-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-narrow-wide-icon lucide-arrow-down-narrow-wide">
+                    <path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="M11 4h4"/><path d="M11 8h7"/><path d="M11 12h10"/>
+                 </svg>
+             </button>
+        </div>
+
+        <div class="search-input">
+            <input type="text" id="searchInput" placeholder="Search tasks..." oninput="searchTasks()">
+        </div>
+        <div class="list-diplay">
+            <div class="not-complete">
+                <p>not completed</p>
+                <input type="radio" id="notCompleted" name="filter"  value="notCompleted" onchange="filterTasks()">
+                <ul id="taskList"></ul>
+            </div>
+
+            <div class="completed">
+                <p>completed</p>
+                <input type="radio" id="completed" name="filter" value="completed" onchange="filterTasks()">
+                <ul id="completedTaskList"></ul>
+            </div> 
+        </div>
+
+        <div class="add-icon">
+            <button id="addBtn" class="add-btn" onclick="displayAddTask()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus">
+                    <path d="M5 12h14"/><path d="M12 5v14"/>
+                </svg>
+            </button>
+        </div>
+
+        <div id="addNewTask" class="addNewTask">
+            <div class="x-icon">
+                <button onclick="document.getElementById('addNewTask').style.display = 'none';">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
+                        <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+                    </svg>
+                </button>
+                <h3>New To-do</h3>
+            </div>
+            <div class="text-input">
+                <input type="text" id="taskInput" placeholder="Enter a task">
+                <div class="input-btn">
+                    <div class="alertbtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer-icon lucide-timer">
+                            <line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/>
+                            <circle cx="12" cy="14" r="8"/>
+                        </svg>
+                        <button id="alert-btn" onclick="setAlert()">set alerts</button>
+                    </div>
+                    <button id="save-btn" onclick="saveTask()">Save</button>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+   
+
+
+
+
+
+    <script src="./JS/script.js"></script>
+    
+</body>
+</html>

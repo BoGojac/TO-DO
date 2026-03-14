@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(46, 45, 45);
+    color: gray;
+}
+.entier-app{
+    height: 100vh;
+    background-color: rgb(46, 45, 45);
+    color: gray;
+    position: relative;
+}
+
+.titel-icon{
+    display: flex;
+    align-items:normal;
+    justify-content:space-between;
+    margin: 20px;
+}
+
+.sort-btn{
+    border: none;
+    background-color: transparent;
+    align-items: self-end;
+    justify-items:self-end;
+}
+
+.addNewTask{
+    display: none;
+    align-self: center;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(66, 66, 66);
+    border-radius: 5px;
+    background-color: transparent;
+    width: 400px;
+    height: 210px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;    
+}
+
+.addNewTask .x-icon{
+    display: flex;
+    justify-content:space-around;
+    margin: 10px 15px;
+}
+.addNewTask .x-icon button{
+    border: none;
+    background-color: transparent;
+    color: gray;
+    font-size: 20px;
+}
+
+.addNewTask .text-input{
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+}
+.addNewTask .text-input input{
+    border: 1px solid gray;
+    background-color: transparent;
+    color: gray;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.addNewTask .text-input .input-btn{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 15px;
+    margin-bottom: 10px; 
+}
+.addNewTask .text-input .input-btn #save-btn{
+    border: 1px solid #d9d585;
+    background-color: transparent;
+    color: #d9d585;     
+    border-radius: 5px;
+    padding: 5px;
+}
+.addNewTask .text-input .input-btn #save-btn:hover{
+    border: 1px solid #e9df2c;
+    color: #e9df2c;     
+    
+}
+.addNewTask .text-input .input-btn .alertbtn{
+display: flex;
+border: 1px solid #d9d585;
+border-radius: 5px;
+padding: 5px;
+background-color: transparent;
+color: #d9d585;     
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+.addNewTask .text-input .input-btn .alertbtn button{
+    border: none;
+    background-color: transparent;
+    color: #d9d585;           
+}
+.addNewTask .text-input .input-btn .alertbtn:hover{
+    border: 1px solid #e9df2c;
+    color: #e9df2c;  
+}
+.addNewTask .text-input .input-btn .alertbtn button:hover{
+    
+    color: #e9df2c;           
+}
+.add-icon{
+    position: absolute; /* Establishes a positioning context for the button */
+    margin: auto;
+    bottom: 10px;      /* Distance from the bottom of the container */
+    right: 60px; 
+}
+
+.add-btn{
+    border: 1px solid #fff200;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff200;
+}
+
+.search-input{
+   position: relative; /* Establishes a positioning context for the search input */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-input #searchInput{
+    border: 1px solid gray;
+    background-color: transparent;
+    color: gray;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 10px;
+}
