@@ -25,6 +25,28 @@
     align-items: self-end;
     justify-items:self-end;
 }
+.sort-dropDown{
+    display: none;
+    border:  solid rgb(79, 79, 79);
+    background-color: rgb(79, 79, 79);
+    padding: 8px;
+    width: 200px;
+    height: 100px;
+    position: absolute; /* Establishes a positioning context for the button */
+    margin: auto;
+    top: 30px;      /* Distance from the bottom of the container */
+    right: 30px; 
+    z-index: 3;
+    border-radius: 5px;
+}
+.sort-dropDown h4{
+  color: white;
+  background-color: rgb(79, 79, 79);
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+  margin: 10px;
+}
 
 .addNewTask{
     display: none;
@@ -129,8 +151,8 @@ transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .search-input{
+    display: none;
    position: relative; /* Establishes a positioning context for the search input */
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -142,4 +164,84 @@ transition: background-color 0.3s ease, color 0.3s ease;
     width: 300px;
     border-radius: 5px;
     padding: 10px;
+}
+.noItem  {
+  width: 50%; /* Or any specific width */
+  margin: auto;
+  position: relative;
+  text-align: center; /* Centers the text inside the block */
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
+  display: flex;
+}
+.list-diplay{
+    display: none;
+    margin: 20px 45px;
+    padding: 16px;
+}
+
+.lists{
+    display: flex;
+    margin: 15px;
+}
+.checkbox-round {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(54, 53, 53);
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #fff200;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  /* Add these to center the tick */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* This creates the yellow tick */
+.checkbox-round:checked::after {
+  content: '';
+  width: 4px;
+  height: 8px;
+  border: solid #fff200; /* Your yellow color */
+  border-width: 0 2px 2px 0; /* Creates the 'L' shape */
+  transform: rotate(45deg); /* Rotates the 'L' into a checkmark */
+  margin-bottom: 2px; /* Slight adjustment for centering */
+}
+.setalarm{
+    display: flex;
+}
+.text-input .setalarm #alarmInput{
+    width: 220px;
+    height: inherit;
+}
+.setalarm #set-alarmbtn{
+    display: none;
+    padding: 10px;
+    margin: auto 10px;
+    border: 1px solid #d9d585;
+    color: #d9d585;
+    border-radius: 5px;
+}
+.setalarm #set-alarmbtn:hover{
+    border: 1px solid #fff200;
+    color: #fff200;
+}
+.text-input #alertDispaly{
+    margin: 10;
+}
+.text-input #alertDispaly #timer-placeholder{
+    display: inline-block;
+}
+.text-input #alertDispaly button{
+    display: inline-block;
+    margin: 10px;
+    border: none;
+    background-color: transparent;
+    color: gray;
+    font-size: 10px;
 }

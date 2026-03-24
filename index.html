@@ -10,26 +10,29 @@
     <div class="entier-app">
         <div class="titel-icon">
              <h1>TO-DO</h1>
-             <button class="sort-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-narrow-wide-icon lucide-arrow-down-narrow-wide">
-                    <path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="M11 4h4"/><path d="M11 8h7"/><path d="M11 12h10"/>
-                 </svg>
-             </button>
+        </div>
+        <div id="sort-dropDown" class="sort-dropDown">
+            <h4>Sort by the Latest</h4>
+            <h4>Sort by Alert Time</h4>
         </div>
 
         <div class="search-input">
-            <input type="text" id="searchInput" placeholder="Search tasks..." oninput="searchTasks()">
+            <input type="text" id="searchInput" placeholder="Search tasks..." oninput="searchTasks() ">
         </div>
+
+        <div class="noItem">
+                <h1>No Item Yet</h1>
+        </div>
+
         <div class="list-diplay">
+            
             <div class="not-complete">
-                <p>not completed</p>
-                <input type="radio" id="notCompleted" name="filter"  value="notCompleted" onchange="filterTasks()">
-                <ul id="taskList"></ul>
+                <h2>not completed</h2>
+                <ul id="taskList"></ul> 
             </div>
 
             <div class="completed">
-                <p>completed</p>
-                <input type="radio" id="completed" name="filter" value="completed" onchange="filterTasks()">
+                <h2>completed</h2>
                 <ul id="completedTaskList"></ul>
             </div> 
         </div>
@@ -53,9 +56,23 @@
             </div>
             <div class="text-input">
                 <input type="text" id="taskInput" placeholder="Enter a task">
+                
+                <div id="alertDispaly" style="display: none;">
+                    <p id="timer-placeholder"></p>
+                    <button onclick="removeSettedAlertTime()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
+                            <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+                        </svg>
+                    </button>
+                </div>                 
+                <div class="setalarm">
+                    <input type="datetime-local" id="alarmInput" class="checkbox-round" style="display: none;">
+                    <button id="set-alarmbtn" onclick="set()">set</button>
+                </div>
+                
                 <div class="input-btn">
-                    <div class="alertbtn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer-icon lucide-timer">
+                    <div class="alertbtn" id="alertdiv">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="clock-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer-icon lucide-timer">
                             <line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/>
                             <circle cx="12" cy="14" r="8"/>
                         </svg>
