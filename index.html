@@ -10,20 +10,24 @@
     <div class="entier-app">
         <div class="titel-icon">
              <h1>TO-DO</h1>
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-todo-icon lucide-list-todo"><path d="M13 5h8"/><path d="M13 12h8"/><path d="M13 19h8"/><path d="m3 17 2 2 4-4"/><rect x="3" y="4" width="6" height="6" rx="1"/></svg>
         </div>
-        <div id="sort-dropDown" class="sort-dropDown">
-            <h4>Sort by the Latest</h4>
-            <h4>Sort by Alert Time</h4>
-        </div>
-
         <div class="search-input">
             <input type="text" id="searchInput" placeholder="Search tasks..." oninput="searchTasks() ">
         </div>
 
         <div class="noItem">
-                <h1>No Item Yet</h1>
+            <h1>No Item Yet</h1>
         </div>
-
+        
+        <div class="add-icon">
+            <button id="addBtn" class="add-btn" onclick="displayAddTask()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus">
+                    <path d="M5 12h14"/><path d="M12 5v14"/>
+                </svg>
+            </button>
+        </div>
+        
         <div class="list-diplay">
             
             <div class="not-complete">
@@ -37,13 +41,7 @@
             </div> 
         </div>
 
-        <div class="add-icon">
-            <button id="addBtn" class="add-btn" onclick="displayAddTask()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus">
-                    <path d="M5 12h14"/><path d="M12 5v14"/>
-                </svg>
-            </button>
-        </div>
+        
 
         <div id="addNewTask" class="addNewTask">
             <div class="x-icon">
