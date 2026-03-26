@@ -73,12 +73,16 @@ const saveTask = () => {
         return;
     }
 
+    let countId = toDoLists.length > 0 ? toDoLists[toDoLists.length - 1].id + 1 : 1;
+
     const inputToDo = {
-        id: Date.now(),
+        id: countId,
         name: toDoTitle,
         alertTime: alertSetted || "No alarm",
         completed: false
     };
+
+    console.log("Saving task:", inputToDo);
 
     toDoLists.push(inputToDo);
     syncLocalStorage(); // Save to permanent storage
